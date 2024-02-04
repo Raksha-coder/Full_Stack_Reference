@@ -1,0 +1,15 @@
+https://www.youtube.com/watch?v=HqYUgPlGbE8
+
+
+//FOR CONNECTIVITY WITH ANGULAR
+builder.Services.AddCors(option =>
+{
+    option.AddPolicy("AllowOrigin",
+        builder => builder.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .SetIsOriginAllowedToAllowWildcardSubdomains());
+});
+
+
+app.UseCors("AllowOrigin");
