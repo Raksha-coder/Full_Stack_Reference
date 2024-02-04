@@ -1,0 +1,63 @@
+<div class="container">
+  <ng-container *ngIf="clicked; else showEditForm">
+    <div>
+      <h2>More Details</h2>
+      <div>
+        <div>{{ carDetails.id }}</div>
+        <div>{{ carDetails.name }}</div>
+        <div>{{ carDetails.price }}</div>
+        <div>{{ carDetails.contactDetails }}</div>
+        <div>{{ carDetails.categories }}</div>
+        <div *ngIf="role == 'seller'">
+          <button (click)="edit(carDetails.id)" class="UpdateBtn">Edit</button>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #showEditForm class="Update-container">
+
+    <div class="parent-form">
+    <div>
+      <form
+        [formGroup]="editForm"
+   
+        class="form"
+      >
+
+      <div>
+        <h2>Update the car Details</h2>
+      </div>
+        <div>
+          <label for="name">CarName:</label>
+          <input type="text" id="name" formControlName="name" />
+        </div>
+
+        <div>
+          <label for="price">CarPrice:</label>
+          <input type="number" id="price" formControlName="price" />
+        </div>
+        <div>
+          <label for="contactDetails">CarContactDetails:</label>
+          <input
+            type="text"
+            id="contactDetails"
+            formControlName="contactDetails"
+          />
+        </div>
+
+        <div>
+          <label for="categories">Category:</label>
+          <input type="text" id="categories" formControlName="categories" />
+        </div>
+        <input type="submit" value="Update"  (click)="onSubmit(editForm.value)"/>
+      </form>
+    </div>
+
+    <div>
+      <button (click)="onCancel()" class="cancel-btn">Cancel Edit</button>
+    </div>
+
+</div>
+  </ng-template>
+</div>

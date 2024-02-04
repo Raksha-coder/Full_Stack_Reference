@@ -1,0 +1,38 @@
+<div class="container">
+
+    <div>
+        <h1>Add Your Car</h1>
+    </div>
+
+    <div class="form-container">
+        <form [formGroup]="carForm" (ngSubmit)="onSubmit(carForm.value)" class="form">
+            <label for="name">Enter The Name Of Car:</label>
+            <input type="text" id="name" formControlName="name">
+            <div class="warning" *ngIf="carForm.controls?.['name']?.touched">  <!--when input name has clicked or focused out , tab error show karna h -->
+                    <span *ngIf="carForm.controls?.['name']?.errors?.['required']">This field is required.</span>
+                    <span *ngIf="carForm.controls?.['name']?.errors?.['minlength']">minimum length should be 3 or greater</span>
+            </div>
+          
+            <label for="contact">Enter Your ContactDetails:</label>
+            <input type="text" id="contact" formControlName="contactDetails">
+          
+            <label for="price">Enter The Price Of Car:</label>
+            <input type="number" id="price" formControlName="price">
+    
+            <label for="category">Enter The Category:</label>
+            <input type="text" id="category" formControlName="categories">
+          
+            <!-- ... other form controls -->
+          
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+   
+
+</div>
+
+
+
+
+
+  

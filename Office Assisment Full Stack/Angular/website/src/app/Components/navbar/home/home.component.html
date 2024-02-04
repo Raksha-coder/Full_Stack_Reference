@@ -1,0 +1,15 @@
+<h1>Details Of All The Cars</h1>
+<div class="container">
+    <div class="home" *ngFor="let car of cars.response">
+        <div>Name of Car :{{car.name}}</div>
+        <div>Contact On: {{car.contactDetails}}</div>
+        <div>Price:{{car.price}}</div> 
+        <div>Category:{{car.categories}}</div>
+        <a [routerLink]="['child',car.id]"> 
+            <button>More Details</button> 
+        </a> 
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

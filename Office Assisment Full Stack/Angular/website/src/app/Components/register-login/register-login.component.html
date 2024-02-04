@@ -1,0 +1,78 @@
+<div class="container">
+  <ng-container *ngIf="toggle;else LoginTemplate">
+    <div class="Register">
+        <div class="title">
+            <span>Register Form</span>
+        </div>
+        <form [formGroup]="registerForm" (submit)="onRegisterSubmit(registerForm.value)">
+
+            <div>
+                <input type="text" placeholder="Enter Username"  name="user" formControlName="username">
+                <div class="warning" *ngIf="registerForm.controls?.['username']?.touched">
+                    <span *ngIf="registerForm.controls?.['username']?.errors?.['required']">this field is required</span>
+                </div>
+
+            </div>
+            <div>
+                <input type="text" placeholder="Enter Password"  name="pass" formControlName="password">
+                <div class="warning" *ngIf="registerForm.controls?.['password']?.touched">
+                    <span *ngIf="registerForm.controls?.['password']?.errors?.['required']" >this field is required</span>
+                </div>
+
+            </div>
+            <select name="role" id="role"  formControlName="role">
+                <option value="buyer">Buyer</option>
+                <option value="seller">Seller</option>
+            </select>
+            <div>
+                <input type="submit" class="button" value="signUp" placeholder="Register">
+            </div>
+            
+            <div class="login-link">Already member? 
+                <span (click)="onToggle()">Login now</span>   
+            </div>
+        </form>
+    </div>
+</ng-container>
+
+
+
+
+
+   <ng-template #LoginTemplate>      
+        <div class="Login" id="login">
+
+            <div class="title">
+                <span>Login Form</span>
+            </div>
+            <form [formGroup]="loginForm" (submit)="OnSubmit(loginForm.value)">
+                <div>
+                    <input type="text" placeholder="Enter Username"  name="user" formControlName="username">
+                    <div class="warning" *ngIf="loginForm.controls?.['username']?.touched">
+                        <span *ngIf="loginForm.controls?.['username']?.errors?.['required']">this field is required</span>
+                    </div>
+
+                </div>
+
+                <div>
+                        <input type="text" placeholder="Enter Password"  name="pass" formControlName="password">
+                        <div class="warning" *ngIf="loginForm.controls?.['password']?.touched">
+                            <span *ngIf="loginForm.controls?.['password']?.errors?.['required']">this field is required</span>
+                        </div>
+                </div>
+
+                <div>
+                    <input type="submit" value="login" class="button" placeholder="Login">
+                </div>
+                
+
+
+                <div class="signup-link">Not a member? 
+                    <span (click)="onToggle()">Signup now</span>
+                </div>
+
+
+            </form>
+        </div>
+    </ng-template>
+</div>

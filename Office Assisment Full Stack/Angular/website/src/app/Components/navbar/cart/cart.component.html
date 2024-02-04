@@ -1,0 +1,30 @@
+
+<!-- permanent done -->
+<div>
+        <h1>My Cart</h1>
+
+    <div class="container">
+        <div *ngFor="let val of localData" class="cart">
+                
+                <div>{{val.name}}  </div>
+                <div> {{val.price}} </div>
+                <div>{{val.categories}}  </div>
+                <div> {{val.contactDetails}} </div>
+                <button (click)="remove(val)" >remove</button>
+        </div> 
+
+    </div> 
+</div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+   

@@ -1,0 +1,19 @@
+
+<div class="container">
+    <h1>Buy Exclusive Cars</h1>
+
+    <div class="parentBuy">
+        <ng-container  *ngFor="let car of cars.response" >
+            <div class="buy" *ngIf="car.categories == 'buy'">
+                <div>{{car.name}}</div>
+                <div>{{car.price}}</div>
+                <div>{{car.categories}}</div>
+                <div>{{car.contactDetails}}</div>
+                <button (click)="countFun(car)">Add To Cart</button>
+            </div>
+        </ng-container>
+    </div>
+    
+</div>
+
+

@@ -1,0 +1,42 @@
+
+.container{
+    
+  
+   
+}
+
+h1{
+    text-align: center;
+    margin-top: 55px;
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.rent{
+    width: 150px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 2px solid chartreuse;
+}
+
+
+
+button{
+    padding: 5px;
+    margin: 10px 0px;
+    width: 100%;
+    background-color: chartreuse;
+    color: black;
+    outline: none;
+    border: none;
+}
+

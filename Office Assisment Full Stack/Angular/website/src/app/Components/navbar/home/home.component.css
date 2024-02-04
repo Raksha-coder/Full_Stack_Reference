@@ -1,0 +1,36 @@
+
+h1{
+    text-align: center;
+    margin-top: 55px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-content: center;
+}
+
+
+.home{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 2px solid chartreuse;
+}
+
+button{
+    padding: 5px;
+    margin: 10px 0px;
+    width: 100%;
+    background-color: chartreuse;
+    color: black;
+    outline: none;
+    border: none;
+}
+

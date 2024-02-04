@@ -1,0 +1,34 @@
+
+.container{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+
+.form{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    background-color: black;
+    color: white;
+    padding: 20px 20px;
+}
+
+button{
+    color: black;
+    background-color: chartreuse;
+    outline: none;
+    border: none;
+    padding: 10px;
+}
+
+.warning{
+    color: red;
+    font-size: small;
+}

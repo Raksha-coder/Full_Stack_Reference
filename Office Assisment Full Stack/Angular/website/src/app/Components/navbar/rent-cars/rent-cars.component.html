@@ -1,0 +1,24 @@
+
+
+<div class="container">
+
+    <h1>Rent Exclusive Cars</h1>
+
+    <div class="parent" > 
+        <ng-container *ngFor="let car of cars.response" >
+            <div class="rent" *ngIf="car.categories === 'rent'">
+                <div>{{car.name}}</div>
+                <div>{{car.price}}</div>
+                <div>{{car.categories}}</div>
+                <div>{{car.contactDetails}}</div>
+                <button (click)="countFun(car)">Add To Cart</button>
+            </div>
+        </ng-container>
+        <!-- extra div was getting added when condition get false -->
+
+    </div>
+   
+
+</div>
+
+
